@@ -1,0 +1,35 @@
+quarkus:
+  http:
+    port: 8080
+
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: test1234
+    jdbc:
+      url: jdbc:postgresql://localhost:5433/studentcrm
+
+  liquibase:
+    migrate-at-start: true
+    change-log: db/changeLog-root.yaml
+    contexts: dev
+
+  test:
+    continuous-testing: enabled
+
+"%test":
+  quarkus:
+    liquibase:
+      contexts: test
+
+"%dev":
+  quarkus:
+    liquibase:
+      contexts: test
+
+    datasource:
+      db-kind: postgresql
+      username: postgres
+      password: test1234
+      jdbc:
+        url: jdbc:postgresql://localhost:5432/studentcrm

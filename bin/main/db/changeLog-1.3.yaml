@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.3
+      author: JSA
+      changes:
+        - createTable:
+            tableName: student_course
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    tableName: student_course
+              - column:
+                  name: fk_student_id
+                  type: INT
+                  constraints:
+                    nullable: false
+                    tableName: student_course
+                    foreignKeyName: fk_student_id
+                    referencedColumnNames: id
+                    referencedTableName: student
+              - column:
+                  name: fk_course_id
+                  type: INT
+                  constraints:
+                    nullable: false
+                    tableName: student_course
+                    foreignKeyName: fk_course_id
+                    referencedColumnNames: id
+                    referencedTableName: course

@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.2
+      author: JSA
+      changes:
+        - renameColumn:
+            oldColumnName: firstName
+            newColumnName: first_name
+            tableName: student
+        - renameColumn:
+            oldColumnName: lastName
+            newColumnName: last_name
+            tableName: student
+        - renameColumn:
+            oldColumnName: courseName
+            newColumnName: course_name
+            tableName: course
+        - renameColumn:
+            oldColumnName: courseDescription
+            newColumnName: course_description
+            tableName: course
+        
+        

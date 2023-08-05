@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.1
+      author: JSA
+      changes:
+        - createTable:
+            tableName: course
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    tableName: course
+              - column:
+                  name: courseName
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+                    tableName: course
+              - column:
+                  name: courseDescription
+                  type: VARCHAR(40)
+                  constraints:
+                    nullable: false
+                    tableName: course

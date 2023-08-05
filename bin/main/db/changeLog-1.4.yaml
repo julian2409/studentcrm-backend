@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.4
+      author: JSA
+      changes:
+        - addUniqueConstraint:
+            tableName: student_course
+            columnNames: fk_student_id, fk_course_id
+
+        - createIndex:
+            tableName: student_course
+            indexName: index_course_id
+            columns:
+              - column:
+                  name: fk_course_id

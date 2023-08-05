@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0
+      author: JSA
+      changes:
+        - createTable:
+            tableName: student
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    tableName: student
+              - column:
+                  name: firstName
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+                    tableName: student
+              - column:
+                  name: lastName
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+                    tableName: student
+              - column:
+                  name: email
+                  type: VARCHAR(40)
+                  constraints:
+                    nullable: false
+                    tableName: student
