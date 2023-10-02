@@ -1,6 +1,9 @@
 quarkus:
   http:
     port: 8080
+    cors:
+      ~: true
+      origins: http://localhost:3000
 
   datasource:
     db-kind: postgresql
@@ -26,6 +29,9 @@ quarkus:
   quarkus:
     liquibase:
       contexts: test
+    http:
+      cors:
+        origins: /.*/
 
     datasource:
       db-kind: postgresql
