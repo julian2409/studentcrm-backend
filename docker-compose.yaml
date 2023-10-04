@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: studentcrm
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test1234
+    container_name: studentcrm
+  db-native:
+    image: postgres:16-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: studentcrm
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test1234
+    container_name: studentcrm-native

@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.8.21"
-    kotlin("plugin.allopen") version "1.8.21"
+    kotlin("jvm") version "1.9.10"
+    kotlin("plugin.allopen") version "1.9.10"
     id("io.quarkus")
 }
 
@@ -25,10 +25,10 @@ dependencies {
     implementation("io.quarkus:quarkus-config-yaml")
     implementation("io.quarkus:quarkus-liquibase")
     implementation("io.quarkus:quarkus-hibernate-validator")
-    testImplementation("org.testcontainers:postgresql:1.17.6")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
-    testImplementation("org.testcontainers:testcontainers:1.17.6")
-    testImplementation("org.testcontainers:junit-jupiter:1.17.6")
+    testImplementation("org.testcontainers:postgresql:1.19.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testImplementation("org.testcontainers:testcontainers:1.19.1")
+    testImplementation("org.testcontainers:junit-jupiter:1.19.1")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }

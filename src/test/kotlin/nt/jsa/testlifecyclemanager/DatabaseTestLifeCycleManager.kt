@@ -7,7 +7,7 @@ class DatabaseTestLifeCycleManager : QuarkusTestResourceLifecycleManager {
     private lateinit var container: PostgreSQLContainer<*>
 
     override fun start(): MutableMap<String, String> {
-        container = PostgreSQLContainer("postgres:15.2-alpine")
+        container = PostgreSQLContainer("postgres:16-alpine")
             .withDatabaseName("studentcrm")
             .withUsername("postgres")
             .withPassword("test1234")
